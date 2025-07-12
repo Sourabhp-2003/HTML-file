@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<title>Sample Form</title>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form>
+
+<!-- Password Input Field -->
+<label for="password">Password: </label><br>
+<input type="password" id="password" name="password" placeholder="Enter your 
+password" required title="Password must be at least 6 characters long"><br><br>
+
+<!-- Number Input Field -->
+
+
+<label for="age">Age:</label><br>
+<input type="number" id="age" name="age" placeholder="Enter your age" required
+title="Please enter your age in years"><br><br>
+
+<!--Date, URL and Time Fields-->
+<label for="date">Date:</label><br>
+<input type="date" id="date" name="date" placeholder="Select Date" required><br><br>
+
+<label for="time">Time:</label><br>
+<input type="time" id="time" name="time" placeholder="Select Time" required><br><br>
+
+<label for="url">URL:</label><br>
+<input type="url" id="url" name="url" placeholder="Enter url" required><br><br>
+
+<!--Navigations like Check box , Radio button Rnage and files.-->
+
+<label>
+<input type="checkbox"  name="option 1" value="option 1">Option 1
+</label>
+<label>
+<input type="checkbox"  name="option 2" value="option 2">Option 2
+</label>
+
+
+<br><br>
+<label>
+<input type="radio"  name="gender" value="male">Male
+</label>
+<label>
+<input type="radio"  name="gender" value="female">FeMale
+</label>
+
+<br><br>
+
+<label for="fileUpload">fileUpload:</label><br>
+<input type="file" id="file" name="file" accept=".jpg, .png, .pdf" required><br><br>
+
+<br><br>
+
+<label for="volume">volume:</label><br>
+<input type="range" id="volume" name="volume" min="0" max="100" value="50" required><br><br>
+
+
+
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>
