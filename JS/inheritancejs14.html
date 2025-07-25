@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+//extends keyword is used to inheritance.
+
+class Vehicle {
+    start = function() {
+        console.log("vehicle i started.");
+    }
+
+    stop = function() {
+        console.log("vehicle is stoped.");
+    }
+}
+ 
+class bike extends Vehicle {
+    //@override
+    start = function() {
+        console.log("bike is started.");
+    }
+move = function() {
+    console.log("bike is moving.");
+}
+
+}
+
+class car extends Vehicle {
+     //@override
+    start = function() {
+        console.log("car is strted.");
+    }
+move = function() {
+    console.log("car is moving.");
+}
+}
+
+const bk = new bike();
+const cr = new bike();
+bk.start();
+bk.move();
+bk.stop();
+cr.start();
+cr.move();
+cr.stop();
+
+
+
+    </script>
+    
+</body>
+</html>

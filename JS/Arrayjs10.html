@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Array</title>
+</head>
+<body>
+    <script>
+
+
+let myArr=['kodnest', 100, true, null, {name: 'Amit'}];
+console.log(myArr[0]); //apple
+console.log(myArr[1]); // 100
+console.log(myArr[2]); // true
+console.log(myArr[3]); // null
+console.log(myArr[4]); // {name: 'Amit'}
+console.log(myArr);
+
+myArr[2] = 'Ravi';
+console.log(myArr[2]); // Ravi
+console.log(myArr.length); //5
+console.log(myArr);
+
+myArr.push('Java');//last element will add.
+console.log(myArr); // ['kodnest', 100, 'Ravi', null, (), 'Java']
+
+myArr.unshift('Python');//first element will add.
+console.log(myArr); // ['Python', 'kodnest', 100, 'Ravi', null, {}, 'Java']
+
+myArr.pop();
+console.log(myArr);//last element will remove.
+
+myArr.shift();
+console.log(myArr);//first element will remove.
+
+console.log("-----------------------------------");
+
+let num= [10,20,30,40,50,60];
+console.log(num);
+num.splice(1,2,99);//add value in particular index.
+console.log(num);
+
+let num2 = num.slice(2,5); // slice(start index, ending index-1) and it will give the new array.
+console.log(num);//before
+console.log(num2);//  [40, 50, 60]
+
+console.log("-----------------------------------");
+
+let sort= [90, 70, 30, 50, 60, 10];
+console.log(sort);// [90, 70, 30, 50, 60, 10]
+sort.sort();
+console.log(sort);
+
+sort.reverse();
+console.log(sort);
+
+//array traversing.
+let Arr= [90, 70, 30, 50, 60, 10];
+Arr.forEach(function(x) {console.log(x)});//fetching one one value.
+
+let my= [1,2,3];
+let my1=my.map(function(x) { return x * x });
+console.log(my);
+console.log(my1);
+
+    </script>
+</body>
+</html>

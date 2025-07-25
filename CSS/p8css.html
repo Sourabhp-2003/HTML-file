@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.main-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space_evenly;
+    border: 5px solid blue;
+}
+.child-div {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-right: 100px;
+    flex-direction: row; /* This line is not needed as flex-direction is set on the parent */
+}
+    </style>
+
+</head>
+<body>
+
+    <div class="main-div">
+        <div class="child-div"><p>Item1</p></div>
+        <div class="child-div"><p>Item2</p></div>
+        <div class="child-div"><p>Item3</p></div>
+        <div class="child-div"><p>Item4</p></div>
+    </div>
+</body>
+
+</html>

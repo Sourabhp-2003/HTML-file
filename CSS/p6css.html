@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!--All psudo element in CSS.-->
+     
+     <!--Adds a green circle (🟢) before each paragraph.
+
+        Adds a checkmark (✅) after each paragraph.
+
+        Enlarges and colors the first letter of each paragraph.
+
+        Transforms the first line to uppercase.
+
+        Highlights selected text in yellow.
+
+        Styles the placeholder in the input field.
+
+        Changes the color and size of list markers-->
+    <style>
+      .container p::before {
+  content: "🟢 ";
+  color: green;
+  font-weight: bold;
+}
+
+.container p::after {
+  content: " ✅";
+  color: blue;
+  font-weight: bold;
+}
+
+.container p::first-letter {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(20, 220, 30);
+}
+
+.container h1::first-line {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.container h1::selection {
+  background-color: rgb(128, 0, 255);
+  color: black;
+}
+
+.container input::placeholder {
+  color: rgb(128, 128, 128);
+  font-family: 'Times New Roman', serif;
+  font-size: 14px;
+}
+
+.container li::marker {
+  color: orange;
+  font-size: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <!--All psudo element in css.-->
+  <div class="container">
+  <p>This is my first page.</p>
+  <p>This is my second page.</p>
+  <p>This is my third page.</p>
+  <h1>My First Heading</h1>
+  <h2>My Second Heading</h2>
+
+  <ul>
+    <li>Frontend</li>
+    <li>Backend</li>
+    <li>Database</li>
+  </ul>
+
+  <input type="text" placeholder="Enter your name" />
+</div>
+
+</body>
+</html>

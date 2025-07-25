@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Dom</title>
+</head>
+<body>
+    
+    <h1>Welcome</h1>
+    <p class="info">This is message 1</p>
+    <p class="info">This is message 1</p>
+    <p>This is message 1</p>
+
+
+    <input type="radio" name="gender" value="male">Male
+     <input type="radio" name="gender" value="female">Female
+    <button>Click me!</button>
+
+    <div id="container">
+
+<p>div message 1</p>
+<p>div message 1</p>
+<p>div message 1</p>
+
+    </div>
+
+
+     <script>
+        //selecting by queryselectorAll.
+    // Select all <p> elements on the page
+    const allPars = document.querySelectorAll('p');
+    // Log the entire NodeList of <p> elements
+    console.log(allPars);
+
+    // Iterate over each <p> and log its text content
+    allPars.forEach(function(p) {
+      console.log(p.textContent);
+    });
+
+
+
+    //selecting by className.
+
+    const infoPars = document.getElementsByClassName('info');
+      console.log(infoPars);
+
+// Iterating over the elements
+  for (let i = 0; i < infoPars.length; i++) {
+    console.log(infoPars[i].textContent);
+  }
+
+
+  const gendeInput = document.getElementsByName('gender');
+  console.log(gendeInput);
+
+
+  const containerParas = document.querySelectorAll('#container p');
+  console.log(containerParas); 
+
+  </script>
+</body>
+</html>
+
+<!--Method                       Selects By       Returns              Live/Static
+document.querySelector           CSS Selector     Single Element        Static
+document.querySelectorAll        CSS Selector      NodeList              Static
+document.getElementById          ID                Single Element        Live
+document.getElementsByClassName   Class Name      HTMLCollection          Live
+document.getElementsByTagName    Tag Name          HTMLCollection          Live
+document.getElementsByName       Name Attribute    NodeList                Live -->

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Operators in js.</title>
+</head>
+<body>
+    <!--Operators in javascript.-->
+    <script>
+let a = 8;
+let b = 2;
+
+let sum = a + b;
+let difference= a - b;
+let product = a*b;
+let quotient = a/b;
+let remainder = a%b;
+
+document.write(sum);
+document.write("||");// this is output separator.
+
+document.write(difference);
+document.write("||");// this is output separator.
+
+document.write(product);
+document.write("||");// this is output separator.
+
+document.write(quotient);
+document.write("||");// this is output separator.
+
+document.write(remainder);
+document.write("||");// this is output separator.
+
+document.write(a+b);
+document.write("||");// this is output separator.
+
+let exponent = a**b;
+document.write(exponent);
+document.write("||");
+
+let c = ++a; //pre-increment increse and assign the value.
+document.write(c); 
+document.write("||");
+document.write(a); 
+document.write("||");
+
+let d = a++;//post increment assign and increses the value.
+document.write(d); 
+document.write("||");
+document.write(a); 
+document.write("||");
+
+let e = --a;//pre decrement 
+document.write(e); 
+document.write("||");
+document.write(a); 
+document.write("||");
+
+let f = a--;//post decrement.
+document.write(f); 
+document.write("||");
+document.write(a); 
+document.write("||");
+document.write("|||");
+
+let z = a; //asignment operator.
+document.write(z);
+document.write("|||");
+
+z += 3 // z = z+3
+document.write(z);
+document.write("||");
+
+z -= 3 // z = z-3
+document.write(z);
+document.write("||");
+
+z *=3 //z = z*3
+document.write(z);
+document.write("||");
+
+z /= 3 // z = z/3
+document.write(z);
+document.write("||");
+
+z %= 3 //z = z%3
+document.write(z);
+document.write("|||");
+
+
+document.write(6=8); // false
+ document.write("||");
+document.write(6==8); // false
+ document.write("||");
+document.write(6>=8); // false
+ document.write("||");
+document.write(6=='6'); // true
+ document.write("||");
+document.write(6==='6'); // false
+ document.write("||");
+document.write(6!='6'); // false
+ document.write("||");
+document.write(6!== '6'); // true
+ document.write("|||");
+
+ //logical operators.
+ document.write(true || true);
+  document.write("||");
+document.write(true || false);
+ document.write("||");
+document.write(false || true);
+ document.write("||");
+document.write(false || false);
+ document.write("|||");
+
+document.write(true && true);
+ document.write("||");
+document.write(true && false);
+ document.write("||");
+document.write(false && true);
+ document.write("||");
+document.write(false && false);
+ document.write("|||");
+
+document.write(!true);
+ document.write("||");
+document.write(!false);
+ document.write("|||");
+
+let marks = 55;
+ let result = (marks > 35) ? "Pass" : "Fail"; //ternory operator. it will take one expression and two value.
+ console.log(result);
+
+  document.write("|||");
+  
+//Type operator.
+ let a = 45
+console.log(typeof(a));
+
+a = "KodNest";
+console.log(typeof(a));
+
+a = [10,20,30]; // array
+console.log(typeof(a));
+
+console.log(a instanceof Array);
+console.log([15,16,17,18] instanceof Array);
+
+    </script>
+</body>
+</html>

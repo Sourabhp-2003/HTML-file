@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!--DOM: Document Object Module, its an advance js.-->
+    <h1>Welcome</h1>
+    <p id="message">This is my page.</p>
+    <button>Click me</button>
+
+
+    <script>
+const heading = document.querySelector("h1");//queryselector to select tag.
+console.log(heading);
+
+const para = document.getElementById('message');//id is used to get.
+console.log(para);
+
+
+const btn = document.querySelector('button');
+console.log(btn);
+
+
+heading.textContent = "Hello Student!";//textcontent to change text.
+btn.style.backgroundColor = 'red';//style to make color.
+
+
+    </script>
+    
+</body>
+</html>

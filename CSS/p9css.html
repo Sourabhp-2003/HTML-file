@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>flex box</title>
+    <!--Css Flexbox. properties and values.-->
+    <!--Efficiently layout, align, and distribute space among items within a container, even when their size is unknown or dynamic.-->
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .div1 {
+            display: flex;
+          
+            justify-content: space-around;
+        }
+body {
+    background-color: lightgreen;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+}
+        .div2 {
+            display: flex;
+            justify-content: column;
+            gap: 10px;
+            width: 50px;
+            align-items: center;
+            background-color: rgb(156, 128, 240);
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(240, 61, 61);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+           
+        }
+         /*button shrink and grow properties*/
+        .btn1 {
+            background-color: rgb(61, 240, 61);
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        .btn2 {
+            background-color: rgb(61, 61, 240);
+            flex-grow: 2;
+            flex-shrink: 2;
+        }
+        .btn3 {
+            background-color: rgb(240, 240, 61);
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+<button>button1</button>
+<button>button2</button>
+
+    </div>
+    <br><br>
+    <div class="div1">
+        <button><p>Item1</p></button>
+        <button><p>item2</p></button>
+        <button><p>item3</p></button>
+
+    </div>
+    <br><br>
+    <div class="div2">
+        <button>Button1</button>
+        <button>Button2</button>
+        <button>Button3</button>
+        </div>
+
+        <div class="container1">
+
+        <button class="btn btn1">Button6</button>
+        <button class="btn btn2">Button7</button>
+        <button class="btn btn3">Button8</button>
+
+        </div>
+</body>
+</html>

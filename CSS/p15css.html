@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Transformation in css-->
+   <style>
+    /*1.transform: translate(x, y);*/
+    /*x-> move left or right.*/
+    /*y-> move up or down.*/
+.box {
+    width:100px;
+    height: 100px;
+    background-color: blue;
+    transform: translate(100px, 50px); /* Moves the box 100px to the right and 50px down  and for -100px for left and -50px to up.*/
+}
+/*2.transform:scale(x, y);*/
+/* x-> scale horizontally(width), y-> scale vertically(height). If y is not specified, it will scale uniformly.*/
+/* If x is not specified, it will scale uniformly. */
+.box1 {
+    width:100px;
+    height: 100px;
+    background-color: red;
+    transform: scale(1.5); /* Scales the box to 150% of its original size. we can use this feature in button. */
+}
+
+.btn {
+    height:100px;
+    width: 100px;
+    background-color: green;
+    transition: transform 0.5s ease-in; /* Adds a transition effect to the transform property over 0.5 seconds ease-in will work like easy and linear. */
+}
+.btn:hover {
+    transform: scale(1.5); /* Scales the button to 150% of its original size when hovered over. */
+}
+/*3.transform: rotate(deg);*/
+.box2 {
+    width:100px;
+    height: 100px;
+    background-color: yellow;
+   transition: transform 1.5s ease; /* Adds a transition effect to the transform property over 1.5 seconds. */
+}
+
+.box2:hover {
+    transform: rotate(90deg); /* Rotates the box to 90 degrees when hovered over. */
+}
+
+/*4.transform: skew(x, y);*/
+.box3 {
+    width:100px;
+    height: 100px;
+    background-color: purple;
+    transition: transform 1.5s ease; /* Adds a transition effect to the transform property over 1.5 seconds. */
+}
+.box3:hover {
+    transform: skew(20deg, 10deg); /* Skews the box by 20 degrees horizontally and 10 degrees vertically when hovered over. */
+}
+/*5.transform: rotate(deg); with top right or left */
+.box4 {
+    width:100px;
+    height: 100px;
+    background-color: black;
+   transition: transform 1.5s ease; /* Adds a transition effect to the transform property over 1.5 seconds. */
+   transform-origin: top right; /* Sets the origin point for the rotation to the top right corner of the box. */
+}
+
+.box4:hover {
+    transform: rotate(90deg); /* Rotates the box to 90 degrees when hovered over. */
+}
+   </style>
+    <title>Document</title>
+</head>
+<body>
+   <div class="box"></div>
+   <br>
+   <br>
+   <br>
+   <div class="box1"></div>
+    <br>
+   <br>
+   <br>
+   <button class="btn">click</button>
+     <br>
+   <br>
+   <br>
+   <br>
+   <div class="box2"></div>
+      <br>
+   <br>
+   <br>
+   <br>
+   <div class="box3"></div>
+      <br>
+   <br>
+   <br>
+   <br>
+   <div class="box4"></div>
+</body>
+</html>

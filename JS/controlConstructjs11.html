@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Control construct</title>
+</head>
+<body>
+    <script>
+//Selection statement.
+let num1=22
+
+if (num1%2==0) {
+    console.log("even number");
+}
+else {
+    console.log("odd number");
+}
+
+
+num = 3
+switch(num) {
+    case 1:console.log("Monday");
+    break;
+     case 2:console.log("Tues");
+    break;
+     case 3:console.log("Wed");
+    break;
+     case 4:console.log("Thur");
+    break;
+     case 5:console.log("Fri");
+    break;
+    default:console.log("Invalid");
+
+}
+
+//Looping statement.
+//for loop
+for (let i = 1; i<=5;i++) {
+    let res = i * i;
+    console.log("Square of "+i+ " is "+res);
+}
+
+console.log("||");
+//while loop
+  let j = 1;
+while (j<=5) {
+      let res = j*j;
+console.log("Square of "+j+ " is "+res);
+j++
+}
+console.log("||");
+//do...while loop
+let k =1;
+do {
+      let res = k*k;
+console.log("Square of "+k+ " is "+res);
+k++
+}while (k<=5)
+console.log("||");
+
+//for of loop
+
+let number = [10, 20, 30, 40 ,50]
+
+for (let num of number) {
+    console.log(num)
+}
+console.log("||");
+
+//for in loop
+let array = {name: "Sourabh", Age:22, marks:89};
+for (let details in array) {
+console.log(array[details]);
+}
+
+console.log("||");
+
+//example
+function reverseCountdown(n) {
+    let result = [];
+    while (n >= 1) {
+        result.push(n);
+        n--;
+    }
+    return result;
+}
+
+// Call the function and print the result
+let countdown = reverseCountdown(5);
+console.log(countdown);  // Output: [5, 4, 3, 2, 1]
+
+
+    </script>
+</body>
+</html>

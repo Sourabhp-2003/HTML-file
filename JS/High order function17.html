@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>High order function and callback function</title>
+</head>
+<body>
+    <script>
+
+//callback function : called by another function
+function display(data) {
+    console.log("Data: ",data);
+}
+//high-order function : take parameter as a another function.
+function add(a, b, show) {
+
+    res = a+b;
+    show(res);
+}
+//high-order function
+function acceptName(name, show) {
+
+    show(name);
+}
+
+add(10, 20, display);
+acceptName("ajay", display);
+
+
+
+console.log("===============================");
+
+
+function outer() {
+    console.log("Inside Outer");
+
+    return function inner() {//high order function will return the another function 
+        console.log("Inside Inner");
+    }
+}
+
+const inr = outer();
+inr();
+
+
+
+
+    </script>
+</body>
+</html>

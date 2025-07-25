@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div>
+<textarea id="messageBox" placeholder="Type your messsage"></textarea>
+<p>Characters Counted: <span id="charCount">0</span></p>
+</div>
+
+
+
+
+    <script>
+
+const messageBox = document.getElementById('messageBox');
+const charCount = document.getElementById('charCount');
+
+messageBox.addEventListener('input', () => {
+charCount.textContent = messageBox.value.length;
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Closure</title>
+</head>
+<body>
+    
+
+    <script>
+function outerFunction() {
+let count = 0; // Local variable in outerFunction
+return function innerFunction() {
+count++; // Accessing the outer function's variable
+console.log(`Count is: ${count}`);
+}
+};
+const counter = outerFunction(); // outerFunction executes and returns innerFunction
+counter(); // Output: Count is: 1
+counter(); // Output: Count is: 2
+counter(); // Output: Count is: 3
+
+
+console.log("================================================================")
+
+function createBankAccount(initialBalance) {
+  let balance = initialBalance;
+  console.log("initial balance:",balance);
+  return {
+    deposit: function (amount) {
+      balance += amount;
+      console.log(`Deposited: ${amount}, Balance: ${balance}`);
+    },
+    withdraw: function (amount) {
+      if (amount > balance) {
+        console.log('Insufficient funds!');
+      } else {
+        balance -= amount;
+        console.log(`Withdrew: ${amount}, Balance: ${balance}`);
+      }
+    }
+  };
+}
+
+const myAccount = createBankAccount(1000);
+myAccount.deposit(500);   // Output: Deposited: 500, Balance: 1500
+myAccount.withdraw(300);  // Output: Withdrew: 300, Balance: 1200
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

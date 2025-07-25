@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Deep about function</title>
+</head>
+<body>
+    <script>
+
+function printeven() {
+ 
+    for (let i= 10;i<=45;i++)
+     {
+    if(i%2==0) {
+console.log(i);
+}
+}
+}
+printeven();
+
+console.log("====================================");
+
+console.log(greet("Alice"));//calling function with parameter.
+
+function greet(name) {
+    return "Hello, " + name + "!";  
+}
+
+console.log("====================================");
+
+function greet() {
+console.log("Hello, World!");
+}
+function greet(name) {
+console.log("Hello, " + name);//method overloading is not allowed in js.
+}
+greet();
+// Output: Hello, John
+greet("John");
+// Output: Hello, John
+
+console.log("====================================");
+
+function add(...args) {
+if (args.length==2) {
+    console.log(args[0] + args[1]);
+}
+else if (args.length==3){
+    console.log(args[0] + args[1] + args[2]);
+}
+else if (args.length==4) {
+    console.log(args[0] + args[1] + args[2] + args[3]);
+}
+else {
+     console.log("Invalid");
+}
+
+}
+console.log("====================================");
+console.log("====================================");
+
+//New Topic : global scope and local scope.
+
+var a = 10 //global scope
+function display1(){
+var b = 20 // local scope
+console.log(a); //10
+console.log("b:"+b); //20
+}
+display1();
+console.log(a); //10
+console.log("b:"+b); //Error
+
+console.log("====================================");
+
+var a = 10 //global scope
+function outer() {
+var b = 20 //local scope as of outer function
+function inner() {
+var c = 30 //local scope of inner function
+console.log("accessing a in inner" +a); //10
+console.log("accessing b in inner"+b); //20
+console.log("accessing a in inner"+c); //30
+}
+inner();
+console.log("accessing a in outer" +a); //10
+console.log("accessing b in outer" +b); // 20
+//console.log("accessing a in outer"+c); // Error
+}
+outer();
+console.log("accessing a outside"+a); // 10
+//console.log("accessing b outside"+b); // error
+//console.log("accessing c outside"+c); // error
+
+
+//Types of Scope in JavaScript:
+//1. Global Scope: Variables declared outside any function live here. They're like celebrities knows them! everyone
+//2. Local Scope: Variables declared inside a function live here. They're shy and can only be accessed inside their own function.
+//3. Block Scope: Variables declared with let or const inside a block {} live here. They're introverts and don't like stepping out.
+
+
+//How JavaScript Finds Variables:
+//1. First, it looks in the local memory of innerFunction.
+//2. If not found, it checks the parent (outerFunction).
+//3. If still not found, it goes to the global scope.
+//4. If not found anywhere, you get a ReferenceError (JavaScript saying, "Sorry, I couldn't find it!").
+
+    </script>
+
+
+
+</body>
+</html>
+

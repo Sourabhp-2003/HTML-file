@@ -1,0 +1,131 @@
+<!--Website by using Semantic HTML.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Website</title>
+
+     <style>
+      /* here * is universal selector used to select full document. */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex; /* flex will make arrrange of navbar items in a row. */
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: grid; /* Using CSS Grid for layout adjust automatically all cards.*/
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    section, article, aside {
+      background-color: rgb(192, 211, 218);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    aside ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+      
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        padding: 8px 0;
+      }
+    }
+  </style>
+
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+<a href="#">Home</a>
+<a href="#">Contact</a>
+<a href="#">About us</a>
+    </nav>
+
+    <main>
+<section>
+    <h2>About-course</h2>
+    <p>We are Kodnest</p>
+</section>
+
+<article>
+    <h3>Related-Topics</h3>
+    <p>Today we are learning semantic html.</p>
+</article>
+<aside>
+    <h4>Related-topic</h4>
+    <ul>
+        <li>Easy</li>
+         <li>Good</li>
+          <li>Understandable</li>
+    </ul>
+</aside>
+    </main>
+
+    <footer>
+        <p>Copyright 2025 Kodnest Website</p>
+    </footer>
+</body>
+</html>

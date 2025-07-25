@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Css Animation</title>
+    <!--@keyframes used to perform Animation operation.-->
+    <style>
+        /*fadeIneffect:- its not an pre defined name, it is a name given by us */
+        /*animation-name: fadeIneffect; - it is the name of the animation */
+@keyframes fadeIneffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.header {
+    animation-name: fadeIneffect;
+    animation-duration: 10s;
+}
+
+/*slideInfromleft:- its not an pre defined name, it is a name given by us */
+/*in this animation move from left to right */
+@keyframes slideInfromRight {
+    0% {
+        transform:translate(50%);
+        opacity: 0;
+    }
+    100% {
+        transform:translate(0%);
+        opacity: 1;
+    }
+}
+
+
+.para {
+
+    animation-name: slideInfromRight;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 3s;
+    animation-iteration-count: 3;
+}
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="header">KodNest</h1>
+<br>
+    <p class="para">This is Webpage.</p>
+    <br>
+    <br>
+    <h1>This is the end of CSS here.</h1>
+</body>
+</html>
+<!--This is the end of CSS here.-->

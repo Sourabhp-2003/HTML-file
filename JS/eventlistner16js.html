@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Event Listner</title>
+</head>
+<body>
+    <h1>my page</h1>
+    <p id="para">here something p tag.</p>
+   
+
+    <button id="btn">Click me</button>
+
+    <script>
+//for mouse event
+const butnListner = document.getElementById('btn');
+
+butnListner.addEventListener('dblclick', function() {
+    alert("Button double clicked");
+});
+
+const Para = document.getElementById('para');
+Para.addEventListener('mouseout', function() { //like that mousemove, and mouseover, click ,dblclick these are event for mouse.
+    console.log("mouse left");
+});
+
+//for keyboard event
+//1.
+document.addEventListener('keydown' ,(event) =>  {
+    alert('key pressed: ${event.key}');
+});
+
+//2.
+document.addEventListener('keyup' ,(event) =>  {
+    alert('key released: ${event.key}');
+});
+
+//window event
+document.addEventListener('DOMContentLoaded', () => { 
+    console.log('DOM fully loaded and parsed'); 
+});
+
+
+
+window.addEventListener('resize', () => { 
+     console.log('Window resized');
+     });
+
+
+
+window.addEventListener('scroll', () => {
+     console.log('User is scrolling!'); });
+
+
+
+
+//form event:
+//submit
+document.querySelector('#myForm').addEventListener('submit', (event) => {
+event.preventDefault(); // Prevents page refresh
+console.log('Form submitted!');
+});
+
+//change
+//Triggered when the value of an input changes.
+document.querySelector('#myInput').addEventListener('change', (event) => { 
+    console.log(`Input changed to: ${event.target.value}`);
+});
+
+//focus
+//Triggered when an element gains focus (like an input field).
+document.querySelector('#myInput').addEventListener('focus', () => {
+     console.log('Input field focused!');
+});
+
+document.querySelector('#myInput').addEventListener('blur', () => {
+console.log('Input field lost focus!');
+});
+
+//input
+//Triggered every time a user types in an input field.
+document.querySelector('#myInput').addEventListener('input', (event) => {
+console.log(`Current value: ${event.target.value}`);
+});
+
+
+
+    </script>
+
+</body>
+</html>

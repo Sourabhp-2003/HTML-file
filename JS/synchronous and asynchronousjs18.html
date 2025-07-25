@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Synchronous and Asynchronous</title>
+</head>
+<body>
+    <script>
+//synchronous
+console.log("Task-1");
+console.log("Task-2");
+console.log("Task-3");
+
+
+
+console.log("===============================================");
+//Asynchronous
+console.log("Task-1");
+setTimeout ( ()=> {
+console.log("Task-2");
+}, 2000);
+
+console.log("Task-3");
+
+
+
+console.log("===============================================");
+
+
+//Excaption Handling.
+function add() {
+    try {
+    let a = 5;
+    let b = 3;
+    let c = a+b;
+    console.log("Sum:",sum);
+    }
+    catch(ex) {
+        console.log(ex.message);
+    }
+    finally {
+        console.log("finally block executed.");
+    }
+}
+console.log("Program strted");
+add();
+console.log("Program ended");
+
+
+console.log("===============================================");
+
+function checkAge(age) 
+{
+  if (age >= 18)
+  {
+       console.log("vote");
+
+} else {
+          throw new Error(" you age not eligible to vote.");
+}
+}
+
+checkAge(2);
+
+console.log("===============================================");
+
+function checkAge(age) 
+{
+  if (age >= 18)
+  {
+       console.log("vote");
+
+} else {
+          throw new Error(" you age not eligible to vote.");
+}
+}
+console.log("Start");
+try {
+checkAge(2);
+}
+catch(ex) {
+    console.log(ex.message);
+}
+console.log("End");
+
+    </script>
+    
+</body>
+</html>

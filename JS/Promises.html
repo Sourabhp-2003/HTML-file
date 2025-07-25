@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        //Callback function or pyramid of doom:--calling function inside function ,function inside function is called callback.
+        //when we dont want hellBack then go for Promises.
+        let myPromise = new Promise(function(resolve, reject) {
+let success = true;
+if(success) {
+resolve("The operation was successful!");
+} else {
+reject("The operation failed!");
+}
+});
+
+myPromise
+.then(function(result) {
+console.log(result); // Outputs: "The operation was successfull"
+})
+.catch(function(error) {
+console.log(error); // Outputs: "The operation failed!"
+});
+
+console.log("========================================================================");
+
+
+
+
+
+let restaurentPromise = new Promise(function(resolve, reject) {
+    let status = false;
+    if (status) {
+        resolve("food Deliveried.");
+    } else {
+        reject("Food not Delivered due to Heavy rain..");
+    }
+});
+
+restaurentPromise
+.then(function(msg) {
+    console.log(msg);
+    return "plz give the rating...";
+})
+.then(function(msg1) {
+    console.log(msg1);
+    return "Kindly Order next time...";
+})
+.then(function(msg2) {
+    console.log(msg2);
+   
+})
+.catch(function(msg12) {
+    console.log(msg12);
+})
+
+    </script>
+</body>
+</html>

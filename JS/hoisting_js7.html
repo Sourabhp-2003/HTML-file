@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  \
+    <title>Hoisting</title>
+</head>
+<body>
+    <script>
+        greet(); //hoisting means calling before declare.
+
+function greet() {
+    console.log("i am fine!!");
+}
+
+
+
+
+const x = function greet() {   //calling function by using variable.
+    console.log("i am fine!!"); 
+}
+
+x();
+//by using variable we cant do hoisting.
+    </script>
+</body>
+</html>

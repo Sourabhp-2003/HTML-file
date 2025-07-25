@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Promise Chaining</title>
+</head>
+<body>
+<!--NOTE: Take one-one task code from here and try to check working of code.-->
+    <script>
+
+function placeOrder() 
+{
+    return new Promise(function(resolve)
+     {
+    setTimeout(function() 
+    {
+ console.log("Order is placed");
+    }
+       ,2000);
+    });
+}
+
+
+function makePayment() 
+{
+    return new Promise(function(resolve)
+     {
+    setTimeout(function() 
+    {
+ console.log("payment made");
+    }
+       ,3000);
+    });
+}
+
+
+function confirmOrder() 
+{
+    return new Promise(function(resolve)
+     {
+    setTimeout(function() 
+    {
+ console.log("Order confirmed");
+    }
+       ,4000);
+    });
+}
+
+
+function orderDelivery() 
+{
+    return new Promise(function(resolve)
+     {
+    setTimeout(function() 
+    {
+ console.log("Order delivered");
+    }
+       ,5000);
+    });
+}
+
+placeOrder()
+.then(makePayment())
+.then(confirmOrder())
+.then(orderDelivery())
+
+
+console.log("====================================================================");
+
+async function greet() {     //here Async is used to print or create promises.
+return "Greetings of the day";
+}
+greet()
+.then(function(msg) {
+console.log(msg);
+});
+
+console.log("========================================================================");
+//await keword is used to wait to complete the one task and only used in async
+
+function fetchUser() {
+return new Promise((resolve) => {
+setTimeout(() => {
+resolve("User data fetched!");
+}, 1000);
+});
+}
+
+function fetchPosts() {
+return new Promise((resolve) => {
+setTimeout(() => {
+resolve("User posts fetched!");
+}, 2000);
+});
+}
+
+async function fetchData() {
+console.log("Start fetching...");
+const user = await fetchUser();
+console.log(user);
+const posts = await fetchPosts();
+console.log(posts);
+console.log("Fetching complete!");
+}
+
+fetchData();
+    </script>
+    
+</body>
+</html>

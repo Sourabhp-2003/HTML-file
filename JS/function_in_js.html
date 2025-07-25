@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Functions in js.</title>
+</head>
+<body>
+    <script>
+        //Without parameter without return value.
+function add() {
+    let a = 5;
+    let b = 2;
+    console.log(a+b);//7
+}
+//with parameter without return value.
+function sub(num1, num2) {
+    let res = num1 - num2;
+    console.log(res);//5
+}
+
+//without parameter with return value.
+function mul() {
+    let c = 3;
+    let d = 4;
+    let res = c * d;
+    return res;//return 12
+}
+
+//with parameter with return value.
+function div(num1, num2) {
+    let res = num1 / num2;
+    return res;//return 3
+}
+
+add();
+
+sub(8,3);
+
+let resultmul = mul();
+console.log(resultmul);//12
+
+let divres = div(6,2);
+console.log(divres);//3
+
+    </script>
+    
+</body>
+</html>
+<!--there is no function overloading in js bcs functions are treated as object.-->

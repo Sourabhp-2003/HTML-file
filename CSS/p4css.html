@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <!--All Selector classes in one page.-->
+    <style>
+        /* 1. Universal selector */
+        * {
+            font-family: Verdana;
+        }
+
+        /* 2. Class selector */
+        .title {
+            color: blue;
+            font-size: 30px;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        /* 3. ID selector */
+        #large-title {
+            font-size: 50px;
+            color: red;
+            text-align: center;
+            width: 50%;
+            text-transform: uppercase;
+        }
+
+        /* 4. Attribute selector */
+        input[type="email"] {
+            width: 300px;
+            height: 30px;
+            background-color: brown;
+            border-radius: 5px;
+        }
+
+        /* 5. Descendent selector */
+        div p {
+            color: green;
+            font-size: 20px;
+        }
+
+        /* 6. Child selector */
+        ul > li {
+            list-style-type: circle;
+            color: purple;
+        }
+        /* 7. Adjacent sibling selector */
+        h2 + p {
+            color: orange;
+            font-size: 18px;
+        }
+        /* 8. General sibling selector */
+        h3 ~ p {
+            color: darkblue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title uppercase">CSS styling using all selectors.</h1>
+    <p id="large-title">This is my trial.</p>
+
+    <form>
+        <!-- Email input field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <br><br>
+
+        <!-- Password input field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <br><br>
+
+        <!-- Descendent Selector -->
+        <div>
+            <h1>Styling of Descendent.</h1>
+            <p>This paragraph is styled due to the descendent selector.</p>
+        </div>
+        <br><br>
+
+        <!-- Child Selector -->
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <ol>
+                <li>Subitem 1</li>
+                <li>Subitem 2</li>
+            </ol>
+        </ul>
+        <br><br>
+        <!--Adjecent sibling selector-->
+        <h2>Heading1</h2>
+        <p>This paragraph is styled using the adjacent sibling selector.</p>
+        <p>This is another paragraph that follows the previous one.</p>
+        <h2>Another Heading</h2>
+        <p>This paragraph is a child of the div element.</p>
+        <p>This is another paragraph that follows the previous one.</p>
+
+        <br><br>
+        <!--general sibling selector-->
+        <h3>Sibling</h3>
+        <p>this is an one p tag</p>
+        <p>this is a second p tag</p>
+        <div>
+            <p>this is a div inside p tag wont be styled</p>
+        </div>
+        <h3>second sibling</h3>
+        <p>this is one p tag</p>
+        <p>this also p tag</p>
+        <p>this is p tag</p>
+        <span>this is a span tag wont be styled</span>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
